@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Детали машины</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html">← Назад</a>
+      <div id="carDetails"></div>
+    </div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const carId = parseInt(urlParams.get("id"));
+      const carDetailsDiv = document.getElementById("carDetails");
+
+      fetch("cars.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const car = data.find((c) => c.id === carId);
+          if (car) {
+            carDetailsDiv.innerHTML = `
+            <h2>${car.brand} ${car.model}</h2>
+            <img src="images/${car.image}" alt="${car.brand} ${car.model}" style="width:300px">
+            <p>Год: ${car.year}</p>
+            <p>Цена: $${car.price}</p>
+            <p>Страна: ${car.country}</p>
+            <p>Описание: ${car.description}</p>
+          `;
+          } else {
+            carDetailsDiv.innerHTML = "<p>Машина не найдена.</p>";
+          }
+        });
+    </script>
+  </body>
+</html>

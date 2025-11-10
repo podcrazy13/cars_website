@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cars Export</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Машины на экспорт</h1>
+    </header>
+
+    <section class="filters">
+      <label
+        >Марка:
+        <select id="brandFilter">
+          <option value="Все">Все</option>
+        </select>
+      </label>
+      <label
+        >Цена до:
+        <input type="number" id="priceFilter" placeholder="Например 30000" />
+      </label>
+      <button id="applyFilter">Применить фильтр</button>
+    </section>
+
+    <section class="cars-grid" id="carsGrid">
+      <!-- Карточки машин будут добавляться через JS -->
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

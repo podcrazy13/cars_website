@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "brand": "Toyota",
+    "model": "Camry",
+    "year": 2019,
+    "price": 15000,
+    "country": "Japan",
+    "image": "toyota-camry.jpg",
+    "description": "Надежный седан, в отличном состоянии"
+  },
+  {
+    "id": 2,
+    "brand": "BMW",
+    "model": "X5",
+    "year": 2020,
+    "price": 35000,
+    "country": "Germany",
+    "image": "bmw_x5.jpg",
+    "description": "Полный привод, отличная комплектация"
+  },
+  {
+    "id": 3,
+    "brand": "Mercedes",
+    "model": "C-Class",
+    "year": 2018,
+    "price": 28000,
+    "country": "Germany",
+    "image": "mercedes_c.jpg",
+    "description": "Салон кожа, комфортный для дальних поездок"
+  }
+]
